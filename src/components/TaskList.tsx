@@ -1,6 +1,12 @@
+import Task from './Task'
 import styles from './TaskList.module.css'
+import { ITask } from '../App'
 
-function TaskList() {
+interface TaskListProps {
+  tasks: ITask[];
+}
+
+function TaskList({ tasks }: TaskListProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.info}>
@@ -13,7 +19,16 @@ function TaskList() {
       </div>
 
       <div>
-        
+        {tasks.map((task: ITask) => {
+          return (
+            <Task 
+              key={task.id}
+              id={task.id} 
+              compleated={task.compleated} 
+              content={task.content} 
+            />
+          )
+        })}
       </div>
     </div>
   )
