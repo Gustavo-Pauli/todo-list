@@ -1,0 +1,20 @@
+.header {
+  background: var(--gray-700);
+  height: 12.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header > img {
+  width: 7.875rem;
+  height: 3rem;
+}
+
+.newTask {
+  margin-top: -1.6875rem;
+}
+
+.taskListWrapper {
+  margin-top: 4rem;
+}

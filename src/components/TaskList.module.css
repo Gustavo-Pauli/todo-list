@@ -1,0 +1,32 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 0.9375rem;
+
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-400);
+}
+
+.created {
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+}
+
+.compleated {
+  color: var(--purple);
+  display: flex;
+  align-items: center;
+}
+
+.info span {
+  margin-left: 0.5rem;
+  padding: 0.125rem 0.5rem;
+  color: var(--gray-200);
+  font-size: 0.75rem;
+  background: var(--gray-400);
+  border-radius: 9999px;
+}
