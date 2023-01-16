@@ -30,3 +30,9 @@
   background: var(--gray-400);
   border-radius: 9999px;
 }
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}

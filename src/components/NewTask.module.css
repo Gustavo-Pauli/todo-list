@@ -51,5 +51,5 @@
 }
 
 .Button:hover {
-  background-color: var(--blue-dark-hover);
+  background-color: var(--blue);
 }

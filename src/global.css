@@ -10,7 +10,7 @@
   --purple-dark: #5E60CE;
   --blue: #4EA8DE;
   --blue-dark: #1E6F9F;
-  --blue-dark-hover: #3589b9;
+  --blue-dark-t20: rgb(30, 111, 159, 0.2);
   --danger: #E25858;
 }
 
@@ -35,4 +35,5 @@ body, input, textarea, button {
 
 html {
   font-size: 16px;
+  background: var(--gray-600);
 }

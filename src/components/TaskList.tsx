@@ -4,9 +4,10 @@ import { ITask } from '../App'
 
 interface TaskListProps {
   tasks: ITask[];
+  onDeleteTask: (taskId:string) => void;
 }
 
-function TaskList({ tasks }: TaskListProps) {
+function TaskList({ tasks, onDeleteTask }: TaskListProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.info}>
@@ -18,14 +19,13 @@ function TaskList({ tasks }: TaskListProps) {
         </div>
       </div>
 
-      <div>
+      <div className={styles.list}>
         {tasks.map((task: ITask) => {
           return (
             <Task 
               key={task.id}
-              id={task.id} 
-              compleated={task.compleated} 
-              content={task.content} 
+              task={task}
+              onDelete={onDeleteTask}
             />
           )
         })}

@@ -5,17 +5,32 @@
   background: var(--gray-500);
   border: 1px solid var(--gray-400);
   border-radius: 8px;
+
+  display: flex;
+  flex-direction: row;
 }
 
 .wrapper > p {
   font-size: 0.875rem;
+  flex: 1 0;
+
+  text-align: justify;
+
+  text-decoration-color: transparent;
+  transition: color 0.3s ease-out, text-decoration-color 0.3s ease-out;
+}
+
+.checkedP {
+  text-decoration-line: line-through;
+  text-decoration-color: var(--gray-300)!important ;
+  color: var(--gray-300);
 }
 
 .checkboxWrapper {
   width: 1.5rem;
   height: 1.5rem;
 
-  margin-right: 1rem;
+  margin-right: 0.75rem;
 
   display: flex;
   align-items: center;
@@ -25,29 +40,64 @@
 .checkbox {
   width: 1.125rem;
   height: 1.125rem;
+  -webkit-appearance: none;
+  appearance: none;
   background-color: transparent;
   border-radius: 50%;
   vertical-align: middle;
   border: 3px solid var(--blue);
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
   cursor: pointer;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* transition: background-color 0.2s, background-image 0.2s, background-position 0s, border-radius 0.2s; */
+  transition: background 0.2s ease-out, border-color 0.2s, border-width 0s;
 }
 
-.checkbox-round:checked {
-  background-color: red;
+.checkbox:hover {
+  border-color: var(--blue-dark);
+  background-color: var(--blue-dark-t20);
 }
 
-.wrapper > button {
+.checkbox:checked {
+  border-width: 0px;
+  background-color: var(--purple-dark);
+  background-image: url('../assets/check.svg');
+}
+
+.checkbox:checked:hover {
+  background-color: var(--purple);
+}
+
+.deleteButton {
   width: 1.5rem;
   height: 1.5rem;
   background: transparent;
   border: none;
   border-radius: 0.25rem;
-  margin-left: auto;
+  margin-left: 0.75rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.deleteButton > svg {
+  height: 14px;
+  width: 14px;
+  fill: var(--gray-300);
+
+  transition: fill 0.2s;
+}
+
+.deleteButton:hover {
+  background: var(--gray-400);
+}
+
+.deleteButton:hover > svg {
+  fill: var(--danger);
 }
