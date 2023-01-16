@@ -32,6 +32,8 @@ function NewTask({onCreateNewTask, className, ...props}: NewTaskProps) {
           placeholder='Adicione uma nova tarefa' 
           name='content'
           onChange={handleChangeTextInput}
+          spellCheck='false'
+          autoComplete='off'
         />
         <button className={styles.Button} type="submit" disabled={textInput.trimStart() == '' ? true : false}>
           Criar <img src={plusIcon} height="16rem" width="16rem" />
