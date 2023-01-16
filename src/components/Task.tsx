@@ -6,14 +6,16 @@ import { ChangeEvent, useState } from 'react'
 interface TaskProps {
   task: ITask;
   onDelete: (taskId:string) => void; 
+  onCheck: (taskId:string) => void;
 }
 
-function Task({task, onDelete }: TaskProps) {
+function Task({task, onDelete, onCheck }: TaskProps) {
   const [checked, setChecked] = useState(task.compleated)
 
   function handleCheckBoxChange(event:ChangeEvent<HTMLInputElement>) {
     event.target.checked = !checked
-    setChecked(!checked)
+    setChecked(!checked);
+    onCheck(task.id);
   }
 
   function handleDeleteTask() {

@@ -46,6 +46,17 @@ function App() {
     setTaskList(taskList.filter((task) => (task.id != taskId)))
   }
 
+  function handleCheck(taskId:string) {
+    const newTaskList = taskList.map((task) => {
+      if (task.id === taskId) {
+        return {id: task.id, compleated: !task.compleated, content: task.content}
+      } else {
+        return task
+      }
+    })
+    setTaskList(newTaskList);
+  }
+
   return (
     <>
       <header className={styles.header}>
@@ -56,7 +67,7 @@ function App() {
         <NewTask className={styles.newTask} onCreateNewTask={createNewTask} />
       </Wrapper>
       <Wrapper className={styles.taskListWrapper}>
-        <TaskList tasks={taskList} onDeleteTask={deleteTask} />
+        <TaskList tasks={taskList} onDeleteTask={deleteTask} onCheckTask={handleCheck}/>
       </Wrapper>
     </>
   )
