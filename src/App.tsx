@@ -16,25 +16,30 @@ function App() {
   const [taskList, setTaskList] = useState(
     [
       {
-        id:'1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed',
+        id:'1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bec',
         compleated: false,
-        content: 'Terminar projeto todo-list da rocketseat'
+        content: "Marcar essa tarefa como completa"
+      },
+      {
+        id:'1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed',
+        compleated: true,
+        content: "Implementar 'adicionar uma nova tarefa'"
       },
       {
         id:'1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bee',
-        compleated: false,
-        content: 'Etiam scelerisque turpis mi, venenatis tincidunt lectus tincidunt vitae. Donec tristique nibh nibh, in bibendum turpis pharetra vel. Vivamus feugiat pellentesque lorem'
+        compleated: true,
+        content: "Implementar 'Marcar e desmarcar uma tarefa como concluída'"
       },
       {
         id:'1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bef',
         compleated: true,
-        content: 'Aumentar a hitbox da checkbox'
+        content: "Implementar 'Remover uma tarefa da listagem'"
       },
       {
         id:'1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4beg',
         compleated: true,
-        content: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.'
-      },
+        content: "Implementar 'Mostrar o progresso de conclusão das tarefas'"
+      }
     ]
   )
 
