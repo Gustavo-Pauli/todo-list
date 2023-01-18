@@ -12,9 +12,12 @@
 
 .wrapper > p {
   font-size: 0.875rem;
-  flex: 1 0;
-
+  flex-grow: 1;
+  
   text-align: justify;
+  
+  word-wrap: break-word;
+  min-width: 0;
 
   text-decoration-color: transparent;
   transition: color 0.3s ease-out, text-decoration-color 0.3s ease-out;
