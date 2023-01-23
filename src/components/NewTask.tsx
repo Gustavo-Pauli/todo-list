@@ -16,7 +16,6 @@ function NewTask({onCreateNewTask, className, ...props}: NewTaskProps) {
     event.preventDefault();
     onCreateNewTask({id: uuidv4(), content: textInput, compleated: false});
     setTextInput('');
-    (event.currentTarget.children[0] as HTMLInputElement).value = ''
   }
 
   function handleChangeTextInput(event:ChangeEvent<HTMLInputElement>) {
@@ -32,6 +31,7 @@ function NewTask({onCreateNewTask, className, ...props}: NewTaskProps) {
           placeholder='Adicione uma nova tarefa' 
           name='content'
           onChange={handleChangeTextInput}
+          value={textInput}
           spellCheck='false'
           autoComplete='off'
         />
